@@ -1,0 +1,27 @@
+stages:
+  - test
+  - build
+  - smoke test
+testing:
+  image: golang
+  stage: test
+  script:
+    - go test
+building:
+  image: golang
+  stage: build
+  script:
+    - sed -i "s/%%VERSION%%/$CI_COMMIT_SHORT_SHA/" ./hello.go
+    - CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o build/hello hello.go
+  artifacts:
+    paths:
+      - build/
+testing web:
+  stage: smoke test
+  image: alpine
+  script:
+    - build/hello &
+    - apk add --update curl && rm -rf /var/cache/apk/*
+    - sleep 1
+    - curl "http://localhost:8080" | tac | tac | grep -q "Hello, world."
+    - curl "http://localhost:8080/version" | tac | tac | grep -q "$CI_COMMIT_SHORT_SHA"

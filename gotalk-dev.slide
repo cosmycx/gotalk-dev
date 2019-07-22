@@ -89,6 +89,11 @@ CockroachDB, CloudFoundry, Gobot, Beego, …
 * Getting Started: golang.org
 .iframe https://golang.org/ 600 1000
 
+* Getting Started: code editor
+.image img/vs-code.png 300 800
+.image img/vs-code-plug-in.png 220 400
+
+
 * Documentation & Packages: godoc.org
 .iframe https://godoc.org/ 600 1000
 
@@ -97,68 +102,78 @@ CockroachDB, CloudFoundry, Gobot, Beego, …
 
 * Hello World - 2019
 .play code/02-hello-world.go 
+- Packages: standard library e.g. strconv
 
 * Packages
-.code code/default.go
+.code code/03-goget.sh
+go.mod:
+.code code/03-go.mod
+packages: external & local
+
+* Packages and Exports
+.play code/04-exports.go
 
 * Variables
-.code code/default.go
+.play code/05-vars.go
 
 * Functions
-.code code/default.go
+.play code/06-func.go
 
 * Errors
-.code code/default.go
+.code code/07-errors.go
 .image img/thisisfine.png
 
 * Flow control statements: for, if, else, switch and defer
-.code code/default.go
+.code code/08-flow.go
 
 * Types: Structs
-.code code/default.go
+.code code/09-struct.go
 
-* Types: Slices
-.code code/default.go
+* Types: Arrays, Slices
+.code code/10-array-slice.go
 
 * Types: Maps
-.code code/default.go
+.code code/11-maps.go
 
-* Types: Interface{}
-.code code/default.go
+* Types: Interface{}, type inference
+.code code/12-interface0.go
 
 * Methods
-.code code/default.go
+.code code/13-methods.go
 
 * Interfaces
-.code code/default.go
+.code code/14-interfaces.go
 .caption Research: *Composition* *over* *Inheritance*
 
 * Concurency
-  text
+.code code/15-concurency1.go
 
 * Concurency
-  text
+.code code/15-concurency2.go
+
+* Concurency
+.code code/15-concurency3.go
 
 * Simple Server
-  text
+.code code/16-simpleServer.go
 
 * Simple Static Server
-  text
+.code code/17-staticServer.go
 
 * Simple API Server
-  text
+.code code/18-simpleAPIserver.go
 
 
 * gRPC
-.play code/01-hello.go 
-.play code/01-hello.go 
+.play code/19-grpc.go 
+.play code/19-grpc.go 
 
 * Microservices
-text
+.code code/20-ms.yml
 
 
 * Mini CI/CD
-text
+.code code/21-cicd.yml 
 
 
 * What's Next
