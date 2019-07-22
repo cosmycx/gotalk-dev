@@ -1,0 +1,176 @@
+Go for Web Development and Microservices
+
+23 July 2019
+Cosmin Potocean
+@cosmycx
+
+
+* Cosmin Potocean
+
+Software Engineer  
+.image img/ashleymcnamara/BELGIUM.jpg
+
+- Back-End: *Go*
+- Front-End: *JavaScript*
+- Other: DevOps, Linux, iOS, Android
+
+
+* Outline
+- What is Go
+- Why Chose Go
+- Getting Started 
+- Code Examples
+- Concurency
+- Microservices
+- Mini CI/CD
+- What's Next 
+.image img/ashleymcnamara/NERDY.jpg
+
+
+* What is Go
+"Go is an open source programming language that makes it easy to build *simple*, *reliable*, and *efficient* software."
+.link https://golang.org golang.org
+.image img/gopher150.png
+
+
+* History
+
+2007 Design started 
+
+- Robert Griesemer - Java HotSpot VM
+- Rob Pike - UTF-8
+- Ken Thompson - Unix
+.image img/ashleymcnamara/GOPHER_ADADEMY.jpg
+
+* Timeline
+
+- 2009 Open sourced
+- 2012 Version 1
+- 2015 No longer uses C (except cgo)
+- 2018 Go modules (reproducible builds) & web assembly 
+.image img/ashleymcnamara/Doctor_Who_Gopher.jpg
+
+* Current Status
+
+- 2019 Working towards Go 2 - focus on: Error handling & Generics
+*Go* *2*
+- "Go 2 would be an evolution of Go 1"
+- "Go 2 would *not* be an opportunity to redesign the language from scratch"
+- "Our goal for Go 2 is to fix the most significant ways Go fails to scale.” 
+—Russ Cox, GopherCon 2017
+.image img/ashleymcnamara/GopherSpaceCommunity.jpg
+
+* Why Chose Go
+- Fast, compiles to machine code 
+- Efficient, small footprint: mem, cpu
+- Fast builds
+- Great concurency support
+- Web (net/http) standard library
+- Simpler by design
+- Simpler to maintain
+.image img/egonelbre/lifting-1TB-200.png
+.caption Reference: Language Design in the Service of Software Engineering
+
+* Code Concurent Design 
+.image img/moore.png
+"designed for concurrency"
+.link https://blog.golang.org/concurrency-is-not-parallelism Concurency is not parallelism, Rob Pike
+
+* The Projects
+
+*Docker*, *Kubernetes*, Terraform, CoreOS,
+Istio, Traefic, Vault, Consul, Vitess, 
+CockroachDB, CloudFoundry, Gobot, Beego, …
+.image img/ashleymcnamara/DockerGopher.jpg 
+.image img/ashleymcnamara/GopherKubernetes.jpg 
+.image img/state-of-the-gopher-nation-golang-august-2017-13-638.jpg
+
+
+* Getting Started: golang.org
+.iframe https://golang.org/ 600 1000
+
+* Documentation & Packages: godoc.org
+.iframe https://godoc.org/ 600 1000
+
+* Hello World
+.play code/01-hello.go 
+
+* Hello World - 2019
+.play code/02-hello-world.go 
+
+* Packages
+.code code/default.go
+
+* Variables
+.code code/default.go
+
+* Functions
+.code code/default.go
+
+* Errors
+.code code/default.go
+.image img/thisisfine.png
+
+* Flow control statements: for, if, else, switch and defer
+.code code/default.go
+
+* Types: Structs
+.code code/default.go
+
+* Types: Slices
+.code code/default.go
+
+* Types: Maps
+.code code/default.go
+
+* Types: Interface{}
+.code code/default.go
+
+* Methods
+.code code/default.go
+
+* Interfaces
+.code code/default.go
+.caption Research: *Composition* *over* *Inheritance*
+
+* Concurency
+  text
+
+* Concurency
+  text
+
+* Simple Server
+  text
+
+* Simple Static Server
+  text
+
+* Simple API Server
+  text
+
+
+* gRPC
+.play code/01-hello.go 
+.play code/01-hello.go 
+
+* Microservices
+text
+
+
+* Mini CI/CD
+text
+
+
+* What's Next
+.image img/keepcalm550.png
+.image img/ashleymcnamara/Biker_Gopher.jpg
+
+
+* Thank you
+.image img/egonelbre/heart-hug.png
+
+References:
+.caption Code: https://tour.golang.org
+.caption The Go gopher was designed by [[https://www.instagram.com/reneefrench/][Renée French]]
+.caption https://github.com/egonelbre/gophers
+.caption https://github.com/ashleymcnamara/gophers
