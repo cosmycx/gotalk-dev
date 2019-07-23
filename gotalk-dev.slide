@@ -183,7 +183,7 @@ packages: external & local
 .code code/20-ms.yml
 
 * Test
-.play code/22-test.go 
+.code code/22-test.go 
 
 * Mini CI/CD Gitlab
 .code code/21-cicd.yml 
