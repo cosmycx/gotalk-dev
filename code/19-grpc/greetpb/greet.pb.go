@@ -22,154 +22,103 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-type Greeting struct {
-	FirstName            string   `protobuf:"bytes,1,opt,name=first_name,json=firstName,proto3" json:"first_name,omitempty"`
-	LastName             string   `protobuf:"bytes,2,opt,name=last_name,json=lastName,proto3" json:"last_name,omitempty"`
+type NumberRequest struct {
+	Num                  int32    `protobuf:"varint,1,opt,name=num,proto3" json:"num,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *Greeting) Reset()         { *m = Greeting{} }
-func (m *Greeting) String() string { return proto.CompactTextString(m) }
-func (*Greeting) ProtoMessage()    {}
-func (*Greeting) Descriptor() ([]byte, []int) {
+func (m *NumberRequest) Reset()         { *m = NumberRequest{} }
+func (m *NumberRequest) String() string { return proto.CompactTextString(m) }
+func (*NumberRequest) ProtoMessage()    {}
+func (*NumberRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_32c0044392f32579, []int{0}
 }
 
-func (m *Greeting) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Greeting.Unmarshal(m, b)
+func (m *NumberRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_NumberRequest.Unmarshal(m, b)
 }
-func (m *Greeting) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Greeting.Marshal(b, m, deterministic)
+func (m *NumberRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_NumberRequest.Marshal(b, m, deterministic)
 }
-func (m *Greeting) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Greeting.Merge(m, src)
+func (m *NumberRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_NumberRequest.Merge(m, src)
 }
-func (m *Greeting) XXX_Size() int {
-	return xxx_messageInfo_Greeting.Size(m)
+func (m *NumberRequest) XXX_Size() int {
+	return xxx_messageInfo_NumberRequest.Size(m)
 }
-func (m *Greeting) XXX_DiscardUnknown() {
-	xxx_messageInfo_Greeting.DiscardUnknown(m)
+func (m *NumberRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_NumberRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_Greeting proto.InternalMessageInfo
+var xxx_messageInfo_NumberRequest proto.InternalMessageInfo
 
-func (m *Greeting) GetFirstName() string {
+func (m *NumberRequest) GetNum() int32 {
 	if m != nil {
-		return m.FirstName
+		return m.Num
 	}
-	return ""
+	return 0
 }
 
-func (m *Greeting) GetLastName() string {
-	if m != nil {
-		return m.LastName
-	}
-	return ""
-}
-
-type GreetRequest struct {
-	Greeting             *Greeting `protobuf:"bytes,1,opt,name=greeting,proto3" json:"greeting,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
-}
-
-func (m *GreetRequest) Reset()         { *m = GreetRequest{} }
-func (m *GreetRequest) String() string { return proto.CompactTextString(m) }
-func (*GreetRequest) ProtoMessage()    {}
-func (*GreetRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_32c0044392f32579, []int{1}
-}
-
-func (m *GreetRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GreetRequest.Unmarshal(m, b)
-}
-func (m *GreetRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GreetRequest.Marshal(b, m, deterministic)
-}
-func (m *GreetRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GreetRequest.Merge(m, src)
-}
-func (m *GreetRequest) XXX_Size() int {
-	return xxx_messageInfo_GreetRequest.Size(m)
-}
-func (m *GreetRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GreetRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_GreetRequest proto.InternalMessageInfo
-
-func (m *GreetRequest) GetGreeting() *Greeting {
-	if m != nil {
-		return m.Greeting
-	}
-	return nil
-}
-
-type GreetResponse struct {
-	Result               string   `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+type NumberResponse struct {
+	NumDouble            int32    `protobuf:"varint,1,opt,name=numDouble,proto3" json:"numDouble,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *GreetResponse) Reset()         { *m = GreetResponse{} }
-func (m *GreetResponse) String() string { return proto.CompactTextString(m) }
-func (*GreetResponse) ProtoMessage()    {}
-func (*GreetResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_32c0044392f32579, []int{2}
+func (m *NumberResponse) Reset()         { *m = NumberResponse{} }
+func (m *NumberResponse) String() string { return proto.CompactTextString(m) }
+func (*NumberResponse) ProtoMessage()    {}
+func (*NumberResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_32c0044392f32579, []int{1}
 }
 
-func (m *GreetResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GreetResponse.Unmarshal(m, b)
+func (m *NumberResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_NumberResponse.Unmarshal(m, b)
 }
-func (m *GreetResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GreetResponse.Marshal(b, m, deterministic)
+func (m *NumberResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_NumberResponse.Marshal(b, m, deterministic)
 }
-func (m *GreetResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GreetResponse.Merge(m, src)
+func (m *NumberResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_NumberResponse.Merge(m, src)
 }
-func (m *GreetResponse) XXX_Size() int {
-	return xxx_messageInfo_GreetResponse.Size(m)
+func (m *NumberResponse) XXX_Size() int {
+	return xxx_messageInfo_NumberResponse.Size(m)
 }
-func (m *GreetResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GreetResponse.DiscardUnknown(m)
+func (m *NumberResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_NumberResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GreetResponse proto.InternalMessageInfo
+var xxx_messageInfo_NumberResponse proto.InternalMessageInfo
 
-func (m *GreetResponse) GetResult() string {
+func (m *NumberResponse) GetNumDouble() int32 {
 	if m != nil {
-		return m.Result
+		return m.NumDouble
 	}
-	return ""
+	return 0
 }
 
 func init() {
-	proto.RegisterType((*Greeting)(nil), "greet.Greeting")
-	proto.RegisterType((*GreetRequest)(nil), "greet.GreetRequest")
-	proto.RegisterType((*GreetResponse)(nil), "greet.GreetResponse")
+	proto.RegisterType((*NumberRequest)(nil), "calcs.NumberRequest")
+	proto.RegisterType((*NumberResponse)(nil), "calcs.NumberResponse")
 }
 
 func init() { proto.RegisterFile("greet.proto", fileDescriptor_32c0044392f32579) }
 
 var fileDescriptor_32c0044392f32579 = []byte{
-	// 209 bytes of a gzipped FileDescriptorProto
+	// 161 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x4e, 0x2f, 0x4a, 0x4d,
-	0x2d, 0xd1, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x05, 0x73, 0x94, 0xdc, 0xb8, 0x38, 0xdc,
-	0x41, 0x8c, 0xcc, 0xbc, 0x74, 0x21, 0x59, 0x2e, 0xae, 0xb4, 0xcc, 0xa2, 0xe2, 0x92, 0xf8, 0xbc,
-	0xc4, 0xdc, 0x54, 0x09, 0x46, 0x05, 0x46, 0x0d, 0xce, 0x20, 0x4e, 0xb0, 0x88, 0x5f, 0x62, 0x6e,
-	0xaa, 0x90, 0x34, 0x17, 0x67, 0x4e, 0x22, 0x4c, 0x96, 0x09, 0x2c, 0xcb, 0x01, 0x12, 0x00, 0x49,
-	0x2a, 0x59, 0x73, 0xf1, 0x80, 0xcd, 0x09, 0x4a, 0x2d, 0x2c, 0x4d, 0x2d, 0x2e, 0x11, 0xd2, 0xe6,
-	0xe2, 0x48, 0x87, 0x9a, 0x0b, 0x36, 0x89, 0xdb, 0x88, 0x5f, 0x0f, 0x62, 0x3d, 0xcc, 0xba, 0x20,
-	0xb8, 0x02, 0x25, 0x75, 0x2e, 0x5e, 0xa8, 0xe6, 0xe2, 0x82, 0xfc, 0xbc, 0xe2, 0x54, 0x21, 0x31,
-	0x2e, 0xb6, 0xa2, 0xd4, 0xe2, 0xd2, 0x9c, 0x12, 0xa8, 0x2b, 0xa0, 0x3c, 0xa3, 0x00, 0xa8, 0x2d,
-	0xc1, 0xa9, 0x45, 0x65, 0x99, 0xc9, 0xa9, 0x42, 0x0e, 0x50, 0x8d, 0xae, 0x65, 0xa9, 0x45, 0x95,
-	0xf9, 0x79, 0xa9, 0x42, 0xc2, 0xc8, 0x96, 0x40, 0xdd, 0x22, 0x25, 0x82, 0x2a, 0x08, 0xb1, 0x43,
-	0x89, 0x41, 0x83, 0xd1, 0x80, 0xd1, 0x89, 0x2d, 0x8a, 0x25, 0x37, 0x31, 0x33, 0x2f, 0x89, 0x0d,
-	0x1c, 0x2a, 0xc6, 0x80, 0x00, 0x00, 0x00, 0xff, 0xff, 0xa3, 0xf4, 0xe8, 0xd8, 0x24, 0x01, 0x00,
+	0x2d, 0xd1, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x4d, 0x4e, 0xcc, 0x49, 0x2e, 0x56, 0x52,
+	0xe4, 0xe2, 0xf5, 0x2b, 0xcd, 0x4d, 0x4a, 0x2d, 0x0a, 0x4a, 0x2d, 0x2c, 0x4d, 0x2d, 0x2e, 0x11,
+	0x12, 0xe0, 0x62, 0xce, 0x2b, 0xcd, 0x95, 0x60, 0x54, 0x60, 0xd4, 0x60, 0x0d, 0x02, 0x31, 0x95,
+	0xf4, 0xb8, 0xf8, 0x60, 0x4a, 0x8a, 0x0b, 0xf2, 0xf3, 0x8a, 0x53, 0x85, 0x64, 0xb8, 0x38, 0xf3,
+	0x4a, 0x73, 0x5d, 0xf2, 0x4b, 0x93, 0x72, 0x52, 0xa1, 0x2a, 0x11, 0x02, 0x46, 0xfe, 0x5c, 0xbc,
+	0x10, 0x56, 0x70, 0x6a, 0x51, 0x59, 0x66, 0x72, 0xaa, 0x90, 0x1d, 0x17, 0xa7, 0x7b, 0x6a, 0x09,
+	0x44, 0x4c, 0x48, 0x44, 0x0f, 0x6c, 0xb1, 0x1e, 0x8a, 0xad, 0x52, 0xa2, 0x68, 0xa2, 0x10, 0x8b,
+	0x94, 0x18, 0x34, 0x18, 0x0d, 0x18, 0x9d, 0xd8, 0xa2, 0x58, 0x72, 0x13, 0x33, 0xf3, 0x92, 0xd8,
+	0xc0, 0x2e, 0x37, 0x06, 0x04, 0x00, 0x00, 0xff, 0xff, 0xf4, 0x7f, 0x64, 0x02, 0xc8, 0x00, 0x00,
 	0x00,
 }
 
@@ -181,95 +130,95 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// GreetServiceClient is the client API for GreetService service.
+// DoubleServiceClient is the client API for DoubleService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type GreetServiceClient interface {
-	GreetEveryone(ctx context.Context, opts ...grpc.CallOption) (GreetService_GreetEveryoneClient, error)
+type DoubleServiceClient interface {
+	GetDouble(ctx context.Context, opts ...grpc.CallOption) (DoubleService_GetDoubleClient, error)
 }
 
-type greetServiceClient struct {
+type doubleServiceClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewGreetServiceClient(cc *grpc.ClientConn) GreetServiceClient {
-	return &greetServiceClient{cc}
+func NewDoubleServiceClient(cc *grpc.ClientConn) DoubleServiceClient {
+	return &doubleServiceClient{cc}
 }
 
-func (c *greetServiceClient) GreetEveryone(ctx context.Context, opts ...grpc.CallOption) (GreetService_GreetEveryoneClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_GreetService_serviceDesc.Streams[0], "/greet.GreetService/GreetEveryone", opts...)
+func (c *doubleServiceClient) GetDouble(ctx context.Context, opts ...grpc.CallOption) (DoubleService_GetDoubleClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_DoubleService_serviceDesc.Streams[0], "/calcs.DoubleService/GetDouble", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &greetServiceGreetEveryoneClient{stream}
+	x := &doubleServiceGetDoubleClient{stream}
 	return x, nil
 }
 
-type GreetService_GreetEveryoneClient interface {
-	Send(*GreetRequest) error
-	Recv() (*GreetResponse, error)
+type DoubleService_GetDoubleClient interface {
+	Send(*NumberRequest) error
+	Recv() (*NumberResponse, error)
 	grpc.ClientStream
 }
 
-type greetServiceGreetEveryoneClient struct {
+type doubleServiceGetDoubleClient struct {
 	grpc.ClientStream
 }
 
-func (x *greetServiceGreetEveryoneClient) Send(m *GreetRequest) error {
+func (x *doubleServiceGetDoubleClient) Send(m *NumberRequest) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *greetServiceGreetEveryoneClient) Recv() (*GreetResponse, error) {
-	m := new(GreetResponse)
+func (x *doubleServiceGetDoubleClient) Recv() (*NumberResponse, error) {
+	m := new(NumberResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
 	return m, nil
 }
 
-// GreetServiceServer is the server API for GreetService service.
-type GreetServiceServer interface {
-	GreetEveryone(GreetService_GreetEveryoneServer) error
+// DoubleServiceServer is the server API for DoubleService service.
+type DoubleServiceServer interface {
+	GetDouble(DoubleService_GetDoubleServer) error
 }
 
-func RegisterGreetServiceServer(s *grpc.Server, srv GreetServiceServer) {
-	s.RegisterService(&_GreetService_serviceDesc, srv)
+func RegisterDoubleServiceServer(s *grpc.Server, srv DoubleServiceServer) {
+	s.RegisterService(&_DoubleService_serviceDesc, srv)
 }
 
-func _GreetService_GreetEveryone_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(GreetServiceServer).GreetEveryone(&greetServiceGreetEveryoneServer{stream})
+func _DoubleService_GetDouble_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(DoubleServiceServer).GetDouble(&doubleServiceGetDoubleServer{stream})
 }
 
-type GreetService_GreetEveryoneServer interface {
-	Send(*GreetResponse) error
-	Recv() (*GreetRequest, error)
+type DoubleService_GetDoubleServer interface {
+	Send(*NumberResponse) error
+	Recv() (*NumberRequest, error)
 	grpc.ServerStream
 }
 
-type greetServiceGreetEveryoneServer struct {
+type doubleServiceGetDoubleServer struct {
 	grpc.ServerStream
 }
 
-func (x *greetServiceGreetEveryoneServer) Send(m *GreetResponse) error {
+func (x *doubleServiceGetDoubleServer) Send(m *NumberResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *greetServiceGreetEveryoneServer) Recv() (*GreetRequest, error) {
-	m := new(GreetRequest)
+func (x *doubleServiceGetDoubleServer) Recv() (*NumberRequest, error) {
+	m := new(NumberRequest)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
 	return m, nil
 }
 
-var _GreetService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "greet.GreetService",
-	HandlerType: (*GreetServiceServer)(nil),
+var _DoubleService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "calcs.DoubleService",
+	HandlerType: (*DoubleServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "GreetEveryone",
-			Handler:       _GreetService_GreetEveryone_Handler,
+			StreamName:    "GetDouble",
+			Handler:       _DoubleService_GetDouble_Handler,
 			ServerStreams: true,
 			ClientStreams: true,
 		},
