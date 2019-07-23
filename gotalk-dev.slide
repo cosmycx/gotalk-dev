@@ -170,11 +170,14 @@ packages: external & local
 * API Server
 .play code/18-apiserver.go /START OMIT/,/END OMIT/
 
+* gRPC - Protobuf message
+.code code/19-grpc/greetpb/greet.proto
+
 * gRPC - Server
-.play code/19-grpc-client.go 
+.play code/19-grpc/server.go /START OMIT/,/END OMIT/
 
 * gRPC - Client
-.play code/19-grpc-server.go 
+.play code/19-grpc/client.go /START OMIT/,/END OMIT/
 
 * Microservices Dockerfile
 .code code/20-ms.yml
