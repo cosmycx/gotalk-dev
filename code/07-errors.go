@@ -1,12 +1,19 @@
 package main
 
-import "fmt"
-
-func swap(x, y string) (string, string) {
-	return y, x
-}
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-}
+	fmt.Println(emoji("1F30E"))
+} // .main
+
+func emoji(hex string) (emj string, err error) {
+	r, err := strconv.ParseInt(hex, 16, 32)
+	if err != nil {
+		// log.Fatalf("Must exit error: %v", err)
+		return emj, err
+	} // .if
+	return fmt.Sprintf("%c", r), nil
+} // .main

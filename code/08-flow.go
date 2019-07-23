@@ -2,11 +2,22 @@ package main
 
 import "fmt"
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
-
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
+
+	defer fmt.Println("first")
+
+	for i := 0; i < 10; i++ {
+
+		defer fmt.Println(i)
+
+	} // .for
+
+	fmt.Println("last")
+} // .main
+
+/*
+for {
+	break
+	continue
 }
+*/

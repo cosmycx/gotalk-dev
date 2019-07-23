@@ -2,11 +2,21 @@ package main
 
 import "fmt"
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
+type I interface {
+	M()
+}// .I
+
+type T struct {
+	S string
+}// .T
+
+// This method means type T implements the interface I,
+// but we don't need to explicitly declare that it does so.
+func (t T) M() {
+	fmt.Println(t.S)
+}// .M
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-}
+	var i I = T{"hello"}
+	i.M()
+}// .main

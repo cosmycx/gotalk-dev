@@ -2,11 +2,19 @@ package main
 
 import "fmt"
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
+type Vertex struct {
+	Lat, Long float64
+} // .Vertex
+
+var m map[string]Vertex
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-}
+
+	m = make(map[string]Vertex)
+
+	m["Atlanta"] = Vertex{
+		33.7, 84.3,
+	} // .m
+	
+	fmt.Println(m["Atlanta"])
+} // .main

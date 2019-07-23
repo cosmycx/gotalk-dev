@@ -1,12 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
+func say(s string) {
+
+	for i := 0; i < 5; i++ {
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
+	}
+
+} // .say
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-}
+
+	go say("world")
+	say("hello")
+
+} // .main

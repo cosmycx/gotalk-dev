@@ -1,12 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
+type container struct {
+	a, b string
+} // .type
+
+func (c container) list() {
+	fmt.Println(c.a, c.b)
+} // list
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-}
+	c := container{
+		"hello",
+		"world",
+	} // .c
+
+	c.list()
+
+} // .main

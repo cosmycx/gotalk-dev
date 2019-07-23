@@ -2,11 +2,17 @@ package main
 
 import "fmt"
 
-func swap(x, y string) (string, string) {
-	return y, x
-}
-
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
-}
+	var a interface{}
+
+	a = "hello"
+	fmt.Println(a)
+	a = 42
+	fmt.Println(a)
+
+	if b, ok := a.(int); ok {
+		fmt.Println("b: ", b)
+	}
+
+	fmt.Println("a: ", a)
+} // .main
