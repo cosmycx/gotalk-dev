@@ -1,3 +1,4 @@
+//START OMIT
 stages:
   - test
   - build
@@ -22,6 +23,7 @@ testing web:
   script:
     - build/hello &
     - apk add --update curl && rm -rf /var/cache/apk/*
+    // END OMIT
     - sleep 1
     - curl "http://localhost:8080" | tac | tac | grep -q "Hello, world."
     - curl "http://localhost:8080/version" | tac | tac | grep -q "$CI_COMMIT_SHORT_SHA"

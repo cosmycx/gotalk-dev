@@ -186,7 +186,7 @@ packages: external & local
 .code code/22-test.go 
 
 * Mini CI/CD Gitlab
-.code code/21-cicd.yml 
+.code code/21-cicd.yml /START OMIT/,/END OMIT/
 
 
 * What's Next
